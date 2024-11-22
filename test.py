@@ -2,8 +2,8 @@ import requests
 
 
 response = requests.get("https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=11")
-exchenge_json = response.json()
+exchange_json = response.json()
 
-usd_exchenge = [exchenge_dict for exchenge_dict in exchenge_json if exchenge_dict.get("ccy") == "USD"][0]
+usd_exchenge = [exchange_dict for exchange_dict in exchange_json if exchange_dict.get("ccy") == "USD"][0]
 
-print(usd_exchenge.get("buy"))
+print(usd_exchange.get("buy"))
